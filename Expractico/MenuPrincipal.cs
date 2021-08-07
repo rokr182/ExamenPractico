@@ -38,10 +38,12 @@ namespace Expractico
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(" " + Controlador.Controlador.Backup());
+            Controlador.Controlador.CerrarSesion();
             login login = new login();
-            Modelo.Sesion.usuario = null;
             this.Close();
             login.Show();
+
 
         }
     }

@@ -93,10 +93,25 @@ namespace Expractico.Controlador
 
         }
 
+        public static void CerrarSesion()
+        {
+            Modelo.Sesion.usuario = null;
+        }
+
         public DataTable Lista()
         {
             return modelo.ListaUsuarios();
         }
+
+        public static string Backup()
+        {
+            string fecha = DateTime.Now.ToString("dd-MM-yyyy");
+            string ruta = @"C:\Users\juan\source\repos\Expractico\BD\bd"+fecha+".sql";
+            
+            return Modelo.Modelo.Backup(ruta);
+            
+        }
+
 
 
     }

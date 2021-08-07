@@ -59,5 +59,27 @@ namespace Expractico.Modelo
             }
             return dt;
         }
+
+
+        public static string Backup(string ruta)
+        {
+            string mensaje = "";
+            try
+            {
+                MySqlConnection conexion = Conexion.getConexion();
+                MySqlCommand com = new MySqlCommand();
+                MySqlBackup bup = new MySqlBackup(com);
+                com.Connection = conexion;
+                conexion.Open();
+                bup.ExportToFile(ruta);
+                conexion.Close();
+                mensaje = "Backup Realizado";
+            }
+            catch(Exception ex)
+            {
+                mensaje = ex.ToString();
+            }
+            return mensaje;
+        }
     }
 }
