@@ -23,3 +23,13 @@ C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\MySql.Data.xml
 C:\Users\juan\source\repos\Expractico\Expractico\obj\Debug\Expractico.csproj.CopyComplete
 C:\Users\juan\source\repos\Expractico\Expractico\obj\Debug\Expractico.login.resources
 C:\Users\juan\source\repos\Expractico\Expractico\obj\Debug\Expractico.MenuPrincipal.resources
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\MySqlBackup.dll
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\Google.Protobuf.pdb
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\Google.Protobuf.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\System.Buffers.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\System.Memory.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\juan\source\repos\Expractico\Expractico\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
