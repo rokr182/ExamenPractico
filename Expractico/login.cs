@@ -52,8 +52,11 @@ namespace Expractico
                     {
                         MessageBox.Show("Bienvenido "+ usuario);
                         MenuPrincipal mp = new MenuPrincipal();
-                        mp.Show();
                         this.Hide();
+                        mp.ShowDialog();
+                        
+                        
+                       
                     }
                 }
                 catch (Exception ex) { MessageBox.Show("Error>> " + ex); }

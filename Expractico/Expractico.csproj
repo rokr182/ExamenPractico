@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\Modelo.cs" />
+    <Compile Include="Modelo\Sesion.cs" />
     <Compile Include="Modelo\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
