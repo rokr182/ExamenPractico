@@ -18,6 +18,7 @@ namespace Expractico
         public MenuPrincipal()
         {
             InitializeComponent();
+            lblUsuario.Text = Modelo.Sesion.usuario.Usuario;
             LlenarLista();
 
 
@@ -33,6 +34,15 @@ namespace Expractico
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dt.DefaultView.RowFilter = string.Format("Usuario LIKE '{0}%' OR Pais LIKE '{0}%' OR Estado LIKE '{0}%' OR Genero LIKE '{0}%'", txtBuscar.Text);
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            Modelo.Sesion.usuario = null;
+            this.Close();
+            login.Show();
+
         }
     }
 }

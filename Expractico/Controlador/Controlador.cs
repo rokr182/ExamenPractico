@@ -58,7 +58,6 @@ namespace Expractico.Controlador
 
         public string Login(string usuario, string password)
         {
-
             string Mensaje = "";
             Usuarios datosUsuario = null;
             
@@ -81,6 +80,10 @@ namespace Expractico.Controlador
                     if (password != datosUsuario.Password)
                     {
                         Mensaje = "Password incorrecto!";
+                    }
+                    else
+                    {
+                         Modelo.Sesion.usuario = datosUsuario;
                     }
                     
                 }
