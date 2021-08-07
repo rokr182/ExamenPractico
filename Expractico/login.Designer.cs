@@ -35,9 +35,9 @@ namespace Expractico
             this.label2 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblErrorUsuario = new System.Windows.Forms.Label();
             this.lblErrorPass = new System.Windows.Forms.Label();
+            this.lblErrorUsuario = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,7 @@ namespace Expractico
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Text = "juan@hotmail.com";
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // label1
@@ -83,6 +84,7 @@ namespace Expractico
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(100, 20);
             this.txtPass.TabIndex = 1;
+            this.txtPass.Text = "abc12345";
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
@@ -105,15 +107,19 @@ namespace Expractico
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // btnCancelar
+            // lblErrorPass
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(71, 172);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.lblErrorPass.AutoSize = true;
+            this.lblErrorPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPass.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorPass.Location = new System.Drawing.Point(71, 276);
+            this.lblErrorPass.Name = "lblErrorPass";
+            this.lblErrorPass.Size = new System.Drawing.Size(40, 17);
+            this.lblErrorPass.TabIndex = 8;
+            this.lblErrorPass.Text = "---------";
+            this.lblErrorPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblErrorPass.UseCompatibleTextRendering = true;
+            this.lblErrorPass.Visible = false;
             // 
             // lblErrorUsuario
             // 
@@ -129,27 +135,23 @@ namespace Expractico
             this.lblErrorUsuario.UseCompatibleTextRendering = true;
             this.lblErrorUsuario.Visible = false;
             // 
-            // lblErrorPass
+            // btnCancelar
             // 
-            this.lblErrorPass.AutoSize = true;
-            this.lblErrorPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorPass.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorPass.Location = new System.Drawing.Point(71, 276);
-            this.lblErrorPass.Name = "lblErrorPass";
-            this.lblErrorPass.Size = new System.Drawing.Size(40, 17);
-            this.lblErrorPass.TabIndex = 8;
-            this.lblErrorPass.Text = "---------";
-            this.lblErrorPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblErrorPass.UseCompatibleTextRendering = true;
-            this.lblErrorPass.Visible = false;
+            this.btnCancelar.Location = new System.Drawing.Point(71, 172);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Form1
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 388);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.groupBox1.ResumeLayout(false);

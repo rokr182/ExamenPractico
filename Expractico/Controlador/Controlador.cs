@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using Expractico.Modelo;
+using System.Data;
 
 
 namespace Expractico.Controlador
 {
-    class Controlador
+    public class Controlador
     {
         Modelo.Modelo modelo = new Modelo.Modelo();
         public static Boolean ValidarEmail(String email)
@@ -88,5 +89,12 @@ namespace Expractico.Controlador
             return Mensaje;
 
         }
+
+        public DataTable Lista()
+        {
+            return modelo.ListaUsuarios();
+        }
+
+
     }
 }
