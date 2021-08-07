@@ -31,10 +31,33 @@ namespace Expractico.Modelo
                 usr.id = Convert.ToInt32(reader["idUsuarios"].ToString());
                 usr.Usuario = reader["Usuario"].ToString();
                 usr.Password = reader["Password"].ToString();
+                
             }
             conexion.Close();
             return usr;
 
+        }
+
+        public DataTable ListaUsuarios()
+        {
+            DataTable dt = new DataTable();
+            MySqlConnection conexion = Conexion.getConexion();
+            string sql = "SELECT idUsuarios, Usuario, Pais, Estado, Genero FROM usuarios";
+            MySqlCommand com = new MySqlCommand(sql, conexion);
+            
+            try
+            {
+                conexion.Open();
+                com.Connection = conexion;
+                MySqlDataAdapter adapt = new MySqlDataAdapter(com);
+                adapt.Fill(dt);
+                conexion.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error >> " + ex);
+            }
+            return dt;
         }
     }
 }

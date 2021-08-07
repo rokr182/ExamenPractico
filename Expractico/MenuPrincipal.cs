@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Expractico.Controlador;
+
 
 namespace Expractico
 {
@@ -15,6 +17,16 @@ namespace Expractico
         public MenuPrincipal()
         {
             InitializeComponent();
+            LlenarLista();
+
+
         }
+
+        public void LlenarLista()
+        {
+            Controlador.Controlador ctrl = new Controlador.Controlador();
+            dgvLista.DataSource = ctrl.Lista();
+        }
+
     }
 }
