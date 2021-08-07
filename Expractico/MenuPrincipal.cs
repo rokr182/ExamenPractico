@@ -14,6 +14,7 @@ namespace Expractico
 {
     public partial class MenuPrincipal : Form
     {
+        DataTable dt = new DataTable();
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -25,8 +26,13 @@ namespace Expractico
         public void LlenarLista()
         {
             Controlador.Controlador ctrl = new Controlador.Controlador();
-            dgvLista.DataSource = ctrl.Lista();
+            dt = ctrl.Lista();
+            dgvLista.DataSource = dt;
         }
 
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            dt.DefaultView.RowFilter = string.Format("Usuario LIKE '{0}%' OR Pais LIKE '{0}%' OR Estado LIKE '{0}%' OR Genero LIKE '{0}%'", txtBuscar.Text);
+        }
     }
 }
